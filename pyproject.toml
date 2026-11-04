@@ -1,6 +1,6 @@
 [project]
 name = "local-solar-time-lib"
-version = "0.1.0"
+version = "0.1.1"
 description = "Computes local mean and apparent solar time from a longitude and a standard meridian, so you can turn a clock reading into the time a sundial would show."
 requires-python = ">=3.10"
 dependencies = []
