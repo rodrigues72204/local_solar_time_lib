@@ -80,3 +80,10 @@ date's equation of time.
 
 All returned datetimes keep the `tzinfo` of the input and are not normalised
 across midnight, so subtracting two of them gives the true offset.
+
+## Design notes
+
+The window stores values eagerly rather than keeping running aggregates. Running
+sums drift with floating point over long streams, and recomputing from a small
+buffer is cheap enough that the drift is not worth the speed.
+
